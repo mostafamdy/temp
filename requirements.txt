@@ -1,4 +1,5 @@
 gunicorn==19.7.1
+flask
 beautifulsoup4
 colorama==0.4.6
 openai==0.27.2
