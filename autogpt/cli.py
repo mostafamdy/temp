@@ -160,7 +160,6 @@ def main(
             system_prompt=system_prompt,
             triggering_prompt=triggering_prompt,
         )
-        print()
         agent.start_interaction_loop()
 
 

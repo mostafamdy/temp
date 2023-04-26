@@ -19,9 +19,10 @@ from autogpt.spinner import Spinner
 from autogpt.utils import get_current_git_branch, get_latest_bulletin
 
 from flask import Flask, request
+from flask_cors import CORS
 
 app = Flask(__name__)
-
+CORS(app)
 
 
 # #input
@@ -63,6 +64,7 @@ def auth():
     # string h=""
 
     ai_name="AI Bot"
+    # print(Goals)
     system_prompt = AIConfig(ai_name, ai_role, ai_goals.split(",")).construct_full_prompt()
     # Initialize variables
     full_message_history = []
@@ -212,6 +214,7 @@ def choose_action():
     # print(result)
         return "Unable to execute command"
 
+#
 if __name__ == "__main__":
     app.run()
 
