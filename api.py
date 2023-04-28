@@ -40,11 +40,11 @@ user_assistant_reply={}
 @app.route('/auth',methods = ['GET'])
 def auth():
     # id=request.args.get('id')
-    id=random.randint(0, 1000)
+    id=random.randint(0, 100)
     print(id)
     print(user_agent)
     while id in user_agent:
-        id = random.randint(0, 1000)
+        id = random.randint(0, 100)
 
     ai_goals = request.args.get('goals')
     ai_role=request.args.get('role')
