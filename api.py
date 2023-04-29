@@ -20,6 +20,8 @@ from autogpt.utils import get_current_git_branch, get_latest_bulletin
 
 from flask import Flask, request
 from flask_cors import CORS
+import os
+os.environ["PATH"] =os.environ["PATH"] +":/opt/render/project/.render/chrome/opt/google/chrome"
 
 app = Flask(__name__)
 CORS(app)
