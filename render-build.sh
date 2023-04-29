@@ -2,7 +2,7 @@
 # exit on error
 set -o errexit
 
-STORAGE_DIR=/opt/render/project/.render
+STORAGE_DIR=/var/google
 
 if [[ ! -d $STORAGE_DIR/chrome ]]; then
   echo "...Downloading Chrome"
