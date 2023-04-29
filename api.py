@@ -149,6 +149,9 @@ def choose_action():
     action=request.args.get('action')
     if id and action:
         id=int(id)
+        print(id)
+        print(user_assistant_reply)
+        
         pass
     else:
         return "BAD REQUEST"
