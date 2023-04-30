@@ -48,7 +48,7 @@ def auth():
     print(user_agent)
     while id in user_agent:
         id = random.randint(0, 100)
-
+    user_files[id]=[]
     ai_goals = request.args.get('goals')
     ai_role=request.args.get('role')
     print(ai_role)
