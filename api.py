@@ -19,6 +19,7 @@ from autogpt.spinner import Spinner
 from autogpt.utils import get_current_git_branch, get_latest_bulletin
 
 from flask import Flask, request
+from flask import send_file
 from flask_cors import CORS
 import os
 os.environ["PATH"] =os.environ["PATH"] +":/opt/render/project/.render/chrome/opt/google/chrome"
@@ -220,6 +221,11 @@ def choose_action():
         return "Unable to execute command"
 
 #
+@app.route('/download',methods = ['GET'])
+def downloadFile():
+    fileName=request.args.get('fileName')
+    path = "/var/auto_gpt_workspace/"+fileName
+    return send_file(path, as_attachment=True)
 if __name__ == "__main__":
     app.run()
 
