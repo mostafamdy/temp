@@ -36,7 +36,7 @@ CORS(app)
 
 user_agent={}
 user_assistant_reply={}
-
+user_files={}
 # id agent
 
 # @app.route("/<id>/<ai_role>/<ai_goals>")
